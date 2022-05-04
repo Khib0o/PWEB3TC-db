@@ -1,12 +1,16 @@
-DROP DATABASE IF EXISTS Dropbox;
+DROP DATABASE IF EXISTS PManager;
 
-CREATE DATABASE Dropbox;
+CREATE DATABASE PManager;
 
-USE Dropbox;
+USE PManager;
 
 CREATE TABLE users (
     IdUser INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-    Name VARCHAR(30) NOT NULL DEFAULT 'toto' COLLATE 'utf8mb3_general_ci',
+    Name VARCHAR(30) NOT NULL DEFAULT 'toto',
+    token TEXT,
+    id CHAR(50),
+    email VARCHAR(255),
+    url VARCHAR(30),
     PRIMARY KEY (IdUser) USING BTREE
 )
 COLLATE='utf8mb3_general_ci'
@@ -42,7 +46,7 @@ COLLATE='utf8mb3_general_ci'
 ENGINE=InnoDB
 ;
 
-INSERT INTO users (Name) VALUES ('Teys');
+INSERT INTO users (Name, token, id, email, url) VALUES ('Teys', '00000', '00000', 'louis.teys@insa-lyon.fr', 'monsite.com');
 INSERT INTO users (Name) VALUES ('Lee');
 INSERT INTO users (Name) VALUES ('Mansour');
 INSERT INTO users (Name) VALUES ('Jiang');
