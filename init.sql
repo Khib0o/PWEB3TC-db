@@ -65,5 +65,4 @@ INSERT INTO files (Name, DateLastModif, IdOwner) VALUES ('testC1', '2022-03-15 1
 INSERT INTO files (Name, DateLastModif, IdOwner) VALUES ('testC2', '2022-03-15 18:42:42',2);
 INSERT INTO files (Name, DateLastModif, IdOwner) VALUES ('testC3', '2022-03-15 18:42:42',2);
 
-UPDATE files SET File="fichier test" WHERE IdFile=1
-
+UPDATE files SET File="fichier test" WHERE IdFile=1;
