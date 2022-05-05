@@ -57,6 +57,16 @@ ENGINE=InnoDB
 AUTO_INCREMENT=1
 ;
 
+CREATE TABLE `associationproject` (
+	`IdProjects` INT(11) NOT NULL,
+	`IdUser` INT(11) NOT NULL,
+	UNIQUE INDEX `UC_Project` (`IdProjects`, `IdUser`) USING BTREE
+)
+COLLATE='utf8mb3_general_ci'
+ENGINE=InnoDB
+;
+
+
 
 
 INSERT INTO users (Name, token, id, email, url) VALUES ('Teys', '00000', '00000', 'louis.teys@insa-lyon.fr', 'monsite.com');
