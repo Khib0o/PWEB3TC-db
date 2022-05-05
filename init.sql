@@ -11,7 +11,8 @@ CREATE TABLE users (
     id CHAR(50),
     email VARCHAR(255),
     url VARCHAR(150),
-    PRIMARY KEY (IdUser) USING BTREE
+    PRIMARY KEY (IdUser) USING BTREE,
+    UNIQUE INDEX `UC_User` (`email`) USING BTREE
 )
 COLLATE='utf8mb3_general_ci'
 ENGINE=InnoDB
