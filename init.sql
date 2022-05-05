@@ -46,6 +46,19 @@ COLLATE='utf8mb3_general_ci'
 ENGINE=InnoDB
 ;
 
+CREATE TABLE `images` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`path` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`name` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='utf8mb3_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=1
+;
+
+
+
 INSERT INTO users (Name, token, id, email, url) VALUES ('Teys', '00000', '00000', 'louis.teys@insa-lyon.fr', 'monsite.com');
 INSERT INTO users (Name) VALUES ('Lee');
 INSERT INTO users (Name) VALUES ('Mansour');
