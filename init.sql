@@ -36,8 +36,6 @@ ENGINE=InnoDB
 CREATE TABLE projects (
     IdProjects INT(11) NOT NULL,
     Name VARCHAR(50) NOT NULL COLLATE 'utf8mb3_general_ci',
-    Members VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
-    Files VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
     IdOwner INT(11) UNSIGNED NOT NULL,
     PRIMARY KEY (IdProjects) USING BTREE,
     INDEX IdOwne (IdOwner) USING BTREE,
