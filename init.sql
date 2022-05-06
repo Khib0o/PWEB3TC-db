@@ -75,6 +75,7 @@ INSERT INTO users (Name) VALUES ('Jiang');
 INSERT INTO users (Name) VALUES ('Jerbi');
 INSERT INTO users (Name) VALUES ('Dinh');
 
+
 INSERT INTO files (Name, DateLastModif, IdOwner) VALUES ('test', '2022-03-15 18:42:42',1);
 INSERT INTO files (Name, DateLastModif, IdOwner) VALUES ('tesqrqzert', '2022-03-15 18:42:42',1);
 INSERT INTO files (Name, DateLastModif, IdOwner) VALUES ('test', '2022-03-15 18:42:42',1);
@@ -86,6 +87,13 @@ INSERT INTO files (Name, DateLastModif, IdOwner) VALUES ('test', '2022-03-15 18:
 INSERT INTO files (Name, DateLastModif, IdOwner) VALUES ('testC1', '2022-03-15 18:42:42',2);
 INSERT INTO files (Name, DateLastModif, IdOwner) VALUES ('testC2', '2022-03-15 18:42:42',2);
 INSERT INTO files (Name, DateLastModif, IdOwner) VALUES ('testC3', '2022-03-15 18:42:42',2);
+
+INSERT INTO associationproject (IdProjects, IdUser) VALUES (1,2);
+INSERT INTO associationproject (IdProjects, IdUser) VALUES (1,1);
+
+INSERT INTO projects (IdProjects, Name, IdOwner) VALUES (1,'PWEB',1);
+INSERT INTO projects (IdProjects, Name, IdOwner) VALUES (2,'PIR',1);
+INSERT INTO projects (IdProjects, Name, IdOwner) VALUES (3,'CTC',1);
 
 UPDATE files SET File="fichier test" WHERE IdFile=1
 
