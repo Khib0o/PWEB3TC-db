@@ -34,7 +34,7 @@ ENGINE=InnoDB
 ;
 
 CREATE TABLE projects (
-    IdProjects INT(11) NOT NULL,
+    IdProjects INT(11) NOT NULL AUTO_INCREMENT,
     Name VARCHAR(50) NOT NULL COLLATE 'utf8mb3_general_ci',
     IdOwner INT(11) UNSIGNED NOT NULL,
     PRIMARY KEY (IdProjects) USING BTREE,
@@ -89,11 +89,12 @@ INSERT INTO files (Name, DateLastModif, IdOwner) VALUES ('testC2', '2022-03-15 1
 INSERT INTO files (Name, DateLastModif, IdOwner) VALUES ('testC3', '2022-03-15 18:42:42',2);
 
 INSERT INTO associationproject (IdProjects, IdUser) VALUES (1,2);
+INSERT INTO associationproject (IdProjects, IdUser) VALUES (2,1);
 INSERT INTO associationproject (IdProjects, IdUser) VALUES (1,1);
 
-INSERT INTO projects (IdProjects, Name, IdOwner) VALUES (1,'PWEB',1);
-INSERT INTO projects (IdProjects, Name, IdOwner) VALUES (2,'PIR',1);
-INSERT INTO projects (IdProjects, Name, IdOwner) VALUES (3,'CTC',1);
+INSERT INTO projects (Name, IdOwner) VALUES ('PWEB',1);
+INSERT INTO projects (Name, IdOwner) VALUES ('PIR',1);
+INSERT INTO projects (Name, IdOwner) VALUES ('CTC',1);
 
 UPDATE files SET File="fichier test" WHERE IdFile=1
 
