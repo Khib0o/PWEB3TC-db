@@ -68,7 +68,14 @@ COLLATE='utf8mb3_general_ci'
 ENGINE=InnoDB
 ;
 
-
+CREATE TABLE contactinfo (
+    email VARCHAR(80) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+    titre TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+    description TEXT NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci'
+)
+COLLATE='utf8mb3_general_ci'
+ENGINE=InnoDB
+;
 
 
 INSERT INTO users (Name, token, id, email, url) VALUES ('Teys', '00000', '00000', 'louis.teys@insa-lyon.fr', 'monsite.com');
